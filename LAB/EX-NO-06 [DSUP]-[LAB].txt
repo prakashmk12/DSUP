@@ -1,0 +1,37 @@
+						LAB EXERCISES
+EX.NO:06
+						 BUBBLE SORT
+
+AIM:
+	To write a python program to implement bubble sort.
+
+ALGORITHM:
+
+1.Start the program
+2.Compare adjacent elements
+3.Swap elements if needed
+4.Repeat comparison for all elements
+5.Reduce comparison range
+6.Continue until sorted
+7.Stop the program.
+
+PROGRAM:
+
+def bubble_sort(a):
+    n = len(a)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if a[j] > a[j + 1]:
+                a[j], a[j + 1] = a[j + 1], a[j]
+n = int(input("Enter the number of elements in the list: "))
+a = []
+for i in range(n):
+    element = int(input(f"Enter element {i + 1}: "))
+    a.append(element)
+print("Original list:", a)
+bubble_sort(a)
+print("Sorted list:", a)
+
+RESULT:
+
+	Thus, the above python program is executed and the output is obtained.

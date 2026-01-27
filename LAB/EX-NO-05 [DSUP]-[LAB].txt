@@ -1,0 +1,49 @@
+						LAB EXERCISES
+EX.NO:05
+				  PRE-ORDER TRAVERSAL OF A BINARY TREE
+
+AIM:
+
+	To write the python program for pre-order traversal of a binary tree.
+
+ALGORITHM:
+
+1.Start the program
+2.Create a tree node class
+3.Insert elements into the binary tree
+4.Traverse the root node
+5.Traverse the left subtree
+6.Traverse the right subtree
+7.Stop the program
+
+PROGRAM:
+
+class TreeNode:
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
+def insert_tree(root, value):
+    if root is None:
+        return TreeNode(value)
+    if value < root.value:
+        root.left = insert_tree(root.left, value)
+    else:
+        root.right = insert_tree(root.right, value)
+    return root
+def preorder(root):
+    if root:
+        print(root.value, end=" ")
+        preorder(root.left)
+        preorder(root.right)
+root = None
+n = int(input("Enter the number of nodes in the binary tree: "))
+for i in range(n):
+    value = int(input("Enter the value for the node: "))
+    root = insert_tree(root, value)
+print("\nPre-order Traversal of the Binary Tree:")
+preorder(root)
+
+RESULT:
+
+	Thus, the above python program is executed and the output is obtained.

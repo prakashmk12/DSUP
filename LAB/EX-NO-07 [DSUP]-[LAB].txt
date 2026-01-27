@@ -1,0 +1,41 @@
+						LAB EXERCISES
+EX.NO:07
+
+						LINEAR SEARCH
+
+AIM:
+
+	To write a python program to implement linear search.
+
+ALGORITHM:
+
+1.Start the program
+2.Read the list elements
+3.Read the search element
+4.Compare search element with list items
+5.Continue till element is found
+6.Display the position
+7.Stop the program.
+
+PROGRAM:
+
+def linear_search(a, x):
+    for i in range(len(a)):
+        if a[i] == x:
+            return i
+    return -1
+n = int(input("Enter the number of elements in the list: "))
+ll = []
+for i in range(n):
+    element = int(input(f"Enter element {i + 1}: "))
+    ll.append(element)
+value = int(input("Enter the value to search for: "))
+pos = linear_search(ll, value)
+if pos != -1:
+    print(f"Value found at position {pos}.")
+else:
+    print("Value not found.")
+
+RESULT:
+
+	Thus, the above python program is executed and the output is obtained.

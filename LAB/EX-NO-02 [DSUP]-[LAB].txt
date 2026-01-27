@@ -1,0 +1,93 @@
+						LAB EXERCISES
+
+EX.NO:02
+
+				      IMPLEMENTING A SINGLY LINKED LIST
+
+AIM:
+
+	To write a python program to implement a singly linked list a) Create a singly linked list b) Add element to singly linked list c) Remove element from singly linked list.
+
+ALGORITHM:
+
+	1.Start the program.
+	2.Define a node with data and next reference.
+	3.Create an empty linked list.
+	4.Insert nodes at the beginning of the list.
+	5.Remove a specified node from the list.
+	6.Display the linked list.
+	7.Stop the program.
+
+PROGRAM:
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+class SinglyLinkedList:
+    def __init__(self):
+        self.head = None
+    def create(self, data):
+        self.head = Node(data)
+        print(f"List created with head node: {data}")
+    def addstart(self, data):
+        new_node = Node(data)
+        new_node.next = self.head
+        self.head = new_node
+        print(f"Added node with value {data} at the start")
+    def remove(self, data):
+        current = self.head
+        if not current:
+            print("List is empty")
+            return
+        if current.data == data:
+            self.head = current.next
+            print(f"Removed element {data} from head")
+            return
+        prev = None
+        while current and current.data != data:
+            prev = current
+            current = current.next
+        if not current:
+            print(f"Element {data} not found in the list")
+            return
+        prev.next = current.next
+        print(f"Removed element {data}")
+    def display(self):
+        if not self.head:
+            print("The list is empty")
+            return
+        current = self.head
+        while current:
+            print(current.data, end=" -> ")
+            current = current.next
+        print("None")
+sll = SinglyLinkedList()
+while True:
+    print("\n1. Create list")
+    print("2. Add to start of list")
+    print("3. Remove from list")
+    print("4. Display list")
+    print("5. Exit")
+    choice = int(input("Enter your choice: "))
+    if choice == 1:
+        data = int(input("Enter the value for the head node: "))
+        sll.create(data)
+    elif choice == 2:
+        data = int(input("Enter the value to add to start: "))
+        sll.addstart(data)
+    elif choice == 3:
+        data = int(input("Enter the value to remove: "))
+        sll.remove(data)
+    elif choice == 4:
+        print("Current Linked List:")
+        sll.display()
+    elif choice == 5:
+        print("Exiting...")
+        break
+    else:
+        print("Invalid choice. Please try again.")
+
+RESULT:
+
+	Thus, the above python program is executed and the output is obtained.

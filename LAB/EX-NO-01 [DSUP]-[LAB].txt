@@ -1,0 +1,47 @@
+							LAB EXERCISES
+
+EX.NO:01
+
+					IMPLEMENTING ANY ONE PYTHON DATA STRUCTURE
+
+AIM:
+
+	To write a program to implement any one python data structure with the following operations A) Create  B) Add elements C) Access elements D) Remove elements.
+
+ALGORITHM:
+
+	1.Start the program
+	2.Create an empty list
+	3.Insert elements into the list using append()
+	4.Insert an element at a specific position using insert()
+	5.Access elements using index values
+	6.Remove elements using remove() and pop()
+	7.Stop the program.
+
+PROGRAM:
+
+numbers = []
+print("Initial List:", numbers)
+numbers.append(10)
+numbers.append(20)   
+numbers.append(30)
+numbers.append(40)
+numbers.append(50)
+numbers.append(60)
+numbers.append(70)
+numbers.insert(1, 15)
+print("List after adding element:", numbers)
+print("First element:", numbers[0])
+print("Last element:", numbers[-1])
+print("All elements:", numbers)
+for num in numbers:
+    print(num, end="")
+    print()
+numbers.remove(20)          
+remove_item = numbers.pop() 
+print("Removed item using pop():", remove_item)
+print("List after removing elements:", numbers)
+
+RESULT:
+
+	Thus, the above python program is executed and the output is obtained.
